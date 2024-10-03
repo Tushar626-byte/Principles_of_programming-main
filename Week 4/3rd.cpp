@@ -1,4 +1,4 @@
-//! wap in cpp which will calculate thee avg of 10 students 5 will be taken from 2 diff section by doing friend function
+// wap in cpp which will calculate thee avg of 10 students 5 will be taken from 2 diff section by doing friend function
 
 #include <iostream>
 using namespace std;
