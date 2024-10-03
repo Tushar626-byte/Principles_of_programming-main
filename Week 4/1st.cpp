@@ -1,4 +1,4 @@
-//? wap a c++ prog to reverse a pascal triangle
+// wap a c++ program to reverse a pascal triangle
 
 #include <iostream>
 #include <vector>
