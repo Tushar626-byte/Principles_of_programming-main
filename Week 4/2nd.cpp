@@ -1,4 +1,4 @@
-//! wap in c++ nto implement tower of hanoi
+//wap in c++ to implement tower of hanoi
 
 #include <iostream>
 using namespace std;
