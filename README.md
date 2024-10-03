@@ -14,7 +14,7 @@ Each Friday, new code will be added. Check out the directory structure below to 
 | Week 3 | Functions |
 | Week 4 | Arrays and Pointers |
 | Week 5 | File Handling |
-*(More weeks will be added as the semester progresses!)*
+   *(More weeks will be added as the semester progresses!)*
 
 ## 💻 Topics Covered
 - **Variables & Data Types**: Understanding and implementing various data types.
