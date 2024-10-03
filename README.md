@@ -42,7 +42,7 @@ This repository serves as a learning hub where I track my progress and improve m
     ```
 
 ## 🛠️ Technologies Used
-- **Programming Language**: C
+- **Programming Language**: C++
 - **Compiler**: GCC
 - **Platform**: Linux/Windows
 
