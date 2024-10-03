@@ -7,8 +7,8 @@ In this repository, I will be uploading code solutions that I work on during my 
 Each Friday, new code will be added. Check out the directory structure below to follow along!
 
 ### Table of Contents
-| Week | Topic | Link to Code |
-|------|-------|--------------|
+| Week | Topic |
+|------|-------|
 | Week 1 | Basic Input/Output |
 | Week 2 | Control Structures |
 | Week 3 | Functions |
