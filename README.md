@@ -9,11 +9,11 @@ Each Friday, new code will be added. Check out the directory structure below to 
 ### Table of Contents
 | Week | Topic | Link to Code |
 |------|-------|--------------|
-| Week 1 | Basic Input/Output | [Code Link](#) |
-| Week 2 | Control Structures | [Code Link](#) |
-| Week 3 | Functions | [Code Link](#) |
-| Week 4 | Arrays and Pointers | [Code Link](#) |
-| Week 5 | File Handling | [Code Link](#) |
+| Week 1 | Basic Input/Output |
+| Week 2 | Control Structures |
+| Week 3 | Functions |
+| Week 4 | Arrays and Pointers |
+| Week 5 | File Handling |
 *(More weeks will be added as the semester progresses!)*
 
 ## 💻 Topics Covered
