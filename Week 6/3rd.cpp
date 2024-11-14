@@ -13,8 +13,11 @@ public:
     Complex(float r, float i) : real(r), imag(i) {}
 
     // Overload the + operator
-    Complex operator+(const Complex &obj) const {
-        return Complex(real + obj.real, imag + obj.imag);
+    Complex operator+(const Complex &obj) {
+        Complex temp;
+        temp.real = real + obj.real;
+        temp.imag = imag + obj.imag;
+        return temp;
     }
 
     void display() {
