@@ -1,83 +1,53 @@
-//Write a C++ program to implement Multilevel inheritance of student registration system.
 #include <iostream>
 #include <string>
 using namespace std;
-
-// Base class: Person
 class Person {
 protected:
     string name;
     int age;
-
 public:
-    // Method to set name and age of the person
-    void setPersonDetails(const string &personName, int personAge) {
-        name = personName;
-        age = personAge;
+    void setPersonDetails(string n, int a) {
+        name = n;
+        age = a;
     }
-
-    // Method to display person's details
-    void showPersonDetails() {
+    void displayPersonDetails() {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
     }
 };
-
-// Derived class: Student inherits from Person
 class Student : public Person {
 protected:
-    int studentID;
-    string course;
-
+    string studentID;
 public:
-    // Method to set student ID and course
-    void setStudentDetails(int id, const string &studentCourse) {
+    void setStudentDetails(string n, int a, string id) {
+        setPersonDetails(n, a);
         studentID = id;
-        course = studentCourse;
     }
-
-    // Method to display student's details
-    void showStudentDetails() {
+    void displayStudentDetails() {
+        displayPersonDetails();
         cout << "Student ID: " << studentID << endl;
-        cout << "Course: " << course << endl;
     }
 };
-
-// Derived class: RegisteredStudent inherits from Student
-class RegisteredStudent : public Student {
+class Registration : public Student {
 private:
-    string registrationID;
+    string course;
     string registrationDate;
 
 public:
-    // Method to set registration ID and date
-    void setRegistrationDetails(const string &regID, const string &regDate) {
-        registrationID = regID;
-        registrationDate = regDate;
+    void setRegistrationDetails(string n, int a, string id, string c, string date) {
+        setStudentDetails(n, a, id);
+        course = c;
+        registrationDate = date;
     }
-
-    // Method to display all details (person, student, and registration)
-    void showAllDetails() {
-        showPersonDetails();
-        showStudentDetails();
-        cout << "Registration ID: " << registrationID << endl;
+    void displayRegistrationDetails() {
+        displayStudentDetails();
+        cout << "Course: " << course << endl;
         cout << "Registration Date: " << registrationDate << endl;
     }
 };
-
-// Main function
 int main() {
-    // Create an object of RegisteredStudent
-    RegisteredStudent student;
-
-    // Set details for the student
-    student.setPersonDetails("Tushar kanti Dey", 19);    // Name and age
-    student.setStudentDetails(29, "Computer Science");  // Student ID and course
-    student.setRegistrationDetails("REG123", "2024-11-08"); // Registration ID and date
-
-    // Display all details of the student
-    cout << "Student Registration Details:\n";
-    student.showAllDetails();
-
+    Registration reg;
+    reg.setRegistrationDetails("Tushar kanti Dey", 20, "0009043", "Computer Science", "2023-10-01");
+    reg.displayRegistrationDetails();
     return 0;
 }
