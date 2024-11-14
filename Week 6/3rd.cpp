@@ -5,54 +5,36 @@ using namespace std;
 class Complex {
 private:
     float real;
-    float imaginary;
+    float imag;
 
 public:
-    // Constructor to initialize the complex number
-    Complex(float r = 0, float i = 0) : real(r), imaginary(i) {}
+    Complex() : real(0), imag(0) {}
 
-    // Function to input complex number details from the user
-    void input() {
-        cout << "Enter real part: ";
-        cin >> real;
-        cout << "Enter imaginary part: ";
-        cin >> imaginary;
+    Complex(float r, float i) : real(r), imag(i) {}
+
+    // Overload the + operator
+    Complex operator+(const Complex &obj) const {
+        return Complex(real + obj.real, imag + obj.imag);
     }
 
-    // Overload the + operator to add two Complex objects
-    Complex operator+(const Complex &other) const {
-        Complex result;
-        result.real = this->real + other.real;
-        result.imaginary = this->imaginary + other.imaginary;
-        return result;
-    }
-
-    // Method to display the complex number
-    void display() const {
-        cout << real << " + " << imaginary << "i" << endl;
+    void display() {
+        cout << "Real: " << real << " Imaginary: " << imag << endl;
     }
 };
 
 int main() {
-    Complex num1, num2;
+    Complex c1(3.5, 2.5);
+    Complex c2(1.5, 4.5);
+    Complex c3;
 
-    // User inputs for two complex numbers
-    cout << "Enter the first complex number:" << endl;
-    num1.input();
+    c3 = c1 + c2;
 
-    cout << "Enter the second complex number:" << endl;
-    num2.input();
-
-    // Use the overloaded + operator
-    Complex result = num1 + num2;
-
-    // Display the result
-    cout << "\nThe sum of ";
-    num1.display();
-    cout << "and ";
-    num2.display();
-    cout << "is ";
-    result.display();
+    cout << "Complex number 1: ";
+    c1.display();
+    cout << "Complex number 2: ";
+    c2.display();
+    cout << "Sum of complex numbers: ";
+    c3.display();
 
     return 0;
 }

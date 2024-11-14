@@ -27,30 +27,42 @@ protected:
 
 public:
     void getMarks() {
-        cout << "Enter marks for three subjects: ";
         for (int i = 0; i < 3; i++) {
+            cout << "Enter marks for subject " << i + 1 << ": ";
             cin >> marks[i];
         }
     }
 
     void displayMarks() {
-        cout << "Marks for three subjects: ";
         for (int i = 0; i < 3; i++) {
-            cout << marks[i] << " ";
+            cout << "Marks for subject " << i + 1 << ": " << marks[i] << endl;
         }
-        cout << endl;
     }
 };
 
-class Result : public Exam {
+class Sports {
+protected:
+    int sportsScore;
+
+public:
+    void getSportsScore() {
+        cout << "Enter sports score: ";
+        cin >> sportsScore;
+    }
+
+    void displaySportsScore() {
+        cout << "Sports Score: " << sportsScore << endl;
+    }
+};
+
+class Result : public Exam, public Sports {
 public:
     void displayResult() {
-        int totalMarks = 0;
-        for (int i = 0; i < 3; i++) {
-            totalMarks += marks[i];
-        }
-        cout << "Total Marks: " << totalMarks << endl;
-        cout << "Percentage: " << (totalMarks / 3.0) << "%" << endl;
+        displayStudentData();
+        displayMarks();
+        displaySportsScore();
+        int total = marks[0] + marks[1] + marks[2] + sportsScore;
+        cout << "Total Score: " << total << endl;
     }
 };
 
@@ -58,9 +70,7 @@ int main() {
     Result result;
     result.getStudentData();
     result.getMarks();
-    cout << endl;
-    result.displayStudentData();
-    result.displayMarks();
+    result.getSportsScore();
     result.displayResult();
 
     return 0;
