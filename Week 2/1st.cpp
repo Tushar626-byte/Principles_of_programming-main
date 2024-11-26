@@ -1,4 +1,4 @@
-//! WAP a c++ which will add 2 distances given in feet and inches
+// WAP a c++ which will add 2 distances given in feet and inches
 
 #include <bits/stdc++.h>
 using namespace std;
