@@ -1,4 +1,4 @@
-// 1.A person is traveling in a train from sealdah to barasat , he want to search whether madhyamgram is there in between or not . WAP to check whether he has found his destination or not .
+//A person is traveling in a train from sealdah to barasat , he want to search whether madhyamgram is there in between or not . WAP to check whether he has found his destination or not .
 
 #include <bits/stdc++.h>
 
